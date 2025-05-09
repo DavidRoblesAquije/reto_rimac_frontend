@@ -8,7 +8,7 @@ interface Props {
 
 const initialstate: Plan = {
     name: "",
-    description: "",
+    description: [],
     age: 0,
     price: 0
 };
