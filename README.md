@@ -37,3 +37,20 @@ Este proyecto incluye pruebas unitarias utilizando **Vitest** junto con **React 
 | `OptionCard` | Verifica renderizado de texto y ejecución del callback al hacer clic |
 | `PlanCard`   | Renderiza correctamente datos del plan y ejecuta acción con descuento |
 | `FormHome`   | Valida campos numéricos, comportamiento del botón según el estado del formulario |
+
+## 🚀 Cómo ejecutar el proyecto
+
+Clona el repositorio y ejecuta los siguientes comandos:
+
+```bash
+npm install
+npm run dev
+```
+
+Para correr las pruebas:
+```
+npm run test
+```
+
+El proyecto está disponible en el siguiente enlace:
+https://curious-fox-77b120.netlify.app/
