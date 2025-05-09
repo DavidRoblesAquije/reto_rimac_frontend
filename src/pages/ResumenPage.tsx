@@ -4,6 +4,7 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { iconuser } from "../assets";
 import { useHomeContext } from "../hooks/useHomeContext";
 import { usePlanContext } from "../hooks/usePlanContext";
+import { useEffect } from "react";
 
 function ResumenPage() {
   //Optencion de context datos usuario y planes
@@ -14,6 +15,13 @@ function ResumenPage() {
   const handleReturn = () => {
     navigate("/planes");
   };
+
+  //En caso se vaya via URL directo a resume sin datos de usuario se redirige al Home
+  useEffect(() => {
+    if (!formData.docNumber || !formData.celular || !formData.username) {
+      navigate("/")
+    }
+  }, [formData, navigate])
 
   return (
     <section className="resumen__section">
@@ -39,7 +47,7 @@ function ResumenPage() {
 
           <div className="resumepage__card__responsable">
             <p>Responsable de pago</p>
-            <p>DNI: {formData.docNumber}</p>
+            <p>{formData.docNumber.length > 8 ? "Pasaporte" : "DNI"}: {formData.docNumber}</p>
             <p>Celular: {formData.celular}</p>
           </div>
 

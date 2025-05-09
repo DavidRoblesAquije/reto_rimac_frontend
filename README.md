@@ -52,5 +52,6 @@ Para correr las pruebas:
 npm run test
 ```
 
-El proyecto está disponible en el siguiente enlace:
+## Proyecto desplegado:
+
 https://curious-fox-77b120.netlify.app/

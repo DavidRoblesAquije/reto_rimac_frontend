@@ -1,5 +1,31 @@
 //FORMULARIO
 .form {
+    .form__content {
+        display: flex;
+        flex-direction: row;
+
+        .form__dni {
+            width: 40%;
+        }
+
+        .form__doc {
+            width: 60%;
+        }
+
+        select,
+        input {
+            width: 100%;
+        }
+    }
+
+    .form__celular {
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+    }
+
     .form-group {
         margin-bottom: 16px;
 
@@ -26,6 +52,9 @@
         line-height: 20px;
         letter-spacing: 0.1px;
         text-align: left;
+        margin-left: 5px;
+        position: relative;
+        top: -2px;
     }
 
     .terms {
@@ -67,32 +96,6 @@
 
 //RESPONSIVE
 @media (max-width:767px) {
-    .form__content {
-        display: flex;
-        flex-direction: row;
-
-        .form__dni {
-            width: 40%;
-        }
-
-        .form__doc {
-            width: 60%;
-        }
-
-        select,
-        input {
-            width: 100%;
-        }
-    }
-
-    .form__celular {
-        width: 100%;
-
-        input {
-            width: 100%;
-        }
-    }
-
     .form {
         button {
             width: 100%;

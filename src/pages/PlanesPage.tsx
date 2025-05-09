@@ -13,11 +13,20 @@ import { useHomeContext } from "../hooks/useHomeContext";
 function PlanesPage() {
   //Optencion de context datos usuario
   const { formData } = useHomeContext();
+
   //Definir regreso a Home al hacer click en volver
   const navigate = useNavigate();
   const handleReturn = () => {
     navigate("/");
   };
+
+  //En caso se vaya via URL directo a resume sin datos de usuario se redirige al Home
+  useEffect(() => {
+    if (!formData.docNumber || !formData.celular) {
+      navigate("/")
+    }
+  }, [formData, navigate])
+
   //Determinar seleccion de tipo de plan
   const [selectedOption, setSelectedOption] = useState<OptionType | null>(null);
   const handleOptionSelect = (option: OptionType) => {

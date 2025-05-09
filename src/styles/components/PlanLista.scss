@@ -1,5 +1,44 @@
 .swiper.card__planswipper {
     padding: 30px 1rem;
+    padding-bottom: 60px;
+
+    .swiper-button-prev {
+        position: absolute;
+        bottom: 0;
+        top: inherit;
+        left: 40%;
+        transform: translateX(-50%);
+        border: 2px solid #4F4FFF;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        z-index: 20;
+
+        &::after {
+            font-size: 14px;
+            font-weight: 700;
+            color: #4F4FFF;
+        }
+    }
+
+    .swiper-button-next {
+        position: absolute;
+        bottom: 0;
+        top: inherit;
+        left: 60%;
+        transform: translateX(-50%);
+        border: 2px solid #4F4FFF;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        z-index: 20;
+
+        &::after {
+            font-size: 14px;
+            font-weight: 700;
+            color: #4F4FFF;
+        }
+    }
 
     .card {
         &.card__planslist {
@@ -41,8 +80,8 @@
                     }
                 }
 
-                hr{
-                    margin: 1rem 0; 
+                hr {
+                    margin: 1rem 0;
                 }
 
                 ul {

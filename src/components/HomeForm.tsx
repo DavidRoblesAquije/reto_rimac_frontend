@@ -17,7 +17,10 @@ export const HomeForm = () => {
 
   const [homeData, setHomeData] = useState<FormData>(initialHomeFormState)
 
-  const handleDocTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => setHomeData({ ...homeData, docType: e.target.value as "DNI" | "Pasaporte" });
+  const handleDocTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newDocType = e.target.value as "DNI" | "Pasaporte";
+    setHomeData({ ...homeData, docType: newDocType, docNumber: "" })
+  };
 
   const handleDocNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
