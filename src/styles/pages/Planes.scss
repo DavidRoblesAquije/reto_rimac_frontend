@@ -1,0 +1,94 @@
+$fontSecondary : Lato;
+
+$colorSecondary : #3636ac;
+$colorHover : #ce18a6;
+
+.planes__section {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto auto 1fr auto;
+
+    .planes__container {
+        width: 100%;
+        max-width: 1360px;
+        margin: 0 auto;
+        overflow: hidden;
+        font-family: $fontSecondary;
+        padding: 35px 0px;
+
+        .planes__btn {
+            color: $colorSecondary;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            margin-bottom: 15px;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                color: $colorHover;
+            }
+        }
+
+        .planes__title {
+            max-width: 544px;
+            margin: auto;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: $fontSecondary;
+            color: #141938;
+
+            @media (max-width:475px) {
+                max-width: initial;
+                text-align: initial;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 48px;
+
+                @media (max-width:475px) {
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+        }
+
+        .planes__option_cards {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .planes__section {
+        .planes__container {
+            padding: 35px 1rem;
+            .planes__option_cards {
+                display: block;
+
+                .card__option {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
