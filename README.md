@@ -25,3 +25,15 @@ Tecnologias utilizadas:
 - [x] Selección de usuario (Para mí / Para alguien más)
 - [x] Visualización de planes disponibles filtrados por edad
 - [x] Selección de plan y vista de resumen de plan elegido
+
+## 🧪 Pruebas unitarias
+
+Este proyecto incluye pruebas unitarias utilizando **Vitest** junto con **React Testing Library**, enfocadas en validar la interacción y lógica de los componentes clave.
+
+### ✅ Componentes testeados:
+
+| Componente   | Pruebas realizadas                                                 |
+|--------------|---------------------------------------------------------------------|
+| `OptionCard` | Verifica renderizado de texto y ejecución del callback al hacer clic |
+| `PlanCard`   | Renderiza correctamente datos del plan y ejecuta acción con descuento |
+| `FormHome`   | Valida campos numéricos, comportamiento del botón según el estado del formulario |
